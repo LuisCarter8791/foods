@@ -27,46 +27,52 @@ html {
 /* END OF COMMON STYLES */
 
 /* NAVBAR */
-
-.menu {
-    width: 100%;
-    height: 14rem;
+    
+/* .nav {
     background-color: #000;
-    /* position: fixed; */
-    top: 0;  
-    /* z-index: 100;   */
+    height: 150px;
+    margin-bottom: 200px;
+} */
+
+.navbar-nav {
     display: flex;
-    justify-content: space-around; 
-    align-items: center;
+    flex-direction: row;
+    
+}
 
-}   
- 
-
-.menu-link {
-    color:  #aaa;
-    margin: 0 2rem;
+.nav-link {
+    color: #aaa;
+    margin: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    transition: color .3s;
+    transition: .5s;
+
 }
 
-.menu-link:hover {
-    color: #fff; 
-}
-
-.menu-link i {
-    font-size: 5rem;
-}
-
-.menu-link span {
-    font-size: 2.5rem;
+.nav-item span{
+    font-size: 15px;
     font-weight: 900;
-    letter-spacing: .3rem;
-    margin-top: .5rem
+    letter-spacing: 2px;
+    margin-left: 2px;
+    color: black;
+
 }
 
+i {
+    color: black;
+}
 
+.nav-item span:hover {
+    color: gray;
+    transition: .3s;
+}
+
+.nav-item i:hover {
+    color: gray;
+    transition: .3s;
+}
 
 /* END OF NAVBAR */
 
@@ -80,6 +86,10 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly
+}
+
+.section-1 h1{
+    margin-top: 115px
 }
 
 .section-heading {
@@ -137,8 +147,8 @@ img {
     transform: rotateY(20deg);
     transition: transform .5s;
     /* z-index: 1; */
-    
-   
+    /* margin-bottom: 50px; */
+
 }
 
 .card-title {
@@ -164,8 +174,16 @@ img {
     padding: .5rem;
 }
 
+.section-2 container{
+    z-index: -1;
+}
+
 .card:hover {
     transform: rotateY(20deg) skewX(-2deg);
+}
+
+.card-btn:hover {
+    background-color: white;
 }
 
 /* END OF SECTION 2 */
@@ -365,3 +383,30 @@ img {
 }
 
 /* END OF SECTION 4 */
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 480px) {
+    .nav-link {
+        color: #aaa;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .5s;
+    
+    }
+    .fas {
+        font-size: 25px;
+    }
+
+    .nav-item span{
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin-left: 5px;
+        color: black;
+    
+    }
+  }
